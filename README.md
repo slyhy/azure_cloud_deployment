@@ -4,9 +4,9 @@ The files in this repository were used to configure the network depicted below.
 
 ![Project Diagram](https://github.com/slyhy/azure_cloud_deployment/blob/master/Images/Project%20Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+`[These files](https://github.com/slyhy/azure_cloud_deployment/tree/master/ansible_playbooks)` have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the beat_install.yml file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - `[beat_install.yml](https://github.com/slyhy/azure_cloud_deployment/blob/master/ansible_playbooks/beat_install.yml)`
 
 This document contains the following details:
 - Description of the Topology
@@ -21,7 +21,7 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly stable, in addition to restricting http traffic to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
