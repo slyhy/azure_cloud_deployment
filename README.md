@@ -70,7 +70,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Images/docker_ps_output.png](https://github.com/slyhy/azure_cloud_deployment/blob/master/ansible_playbooks/beat_install.yml)
+![Images/docker_ps_output.png](https://github.com/slyhy/azure_cloud_deployment/blob/master/Images/ELK_Container.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
