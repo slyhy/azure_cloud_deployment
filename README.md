@@ -52,9 +52,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump-Box | Yes                 | 162.203.126.84       |
+| Web-1    | No                  | 10.0.0.4             |
+| Web-2    | No                  | 10.0.0.4             |
+| ELK      | Yes                 | 162.203.126.84       |   
 
 ### Elk Configuration
 
@@ -81,14 +82,13 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat is used to collect system logs such as system.syslog which records system events. 
+- Metricbeat is used to collect information on different system metrics like CPU usage.  
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the __beat_install.yml__ file to __/etc/ansible/roles//__.
+- Copy the __beat_install.yml__ file to __/etc/ansible/roles/__.
 - Update the __beat-install.yml__ file to include __host name where you want to install the playbook, e.g. weberservers or elk__.
 - Run the playbook, and navigate to __Kibana web app (ELK_VM_IP:5601/app/kibana)__ to check that the installation worked as expected.
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
