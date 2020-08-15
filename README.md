@@ -23,7 +23,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly __stable__, in addition to restricting __traffic__ to the network.
 - Load balancers focus on network stability by taking incoming network and distributing it among the avalable machines. 
-- A jump box allows a point of access for a user, so that internal network access fromt the outside may be restricted.
+- A jump box allows a point of access for a user, so that internal network access from the outside may be restricted.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __metrics__ and system __logs__.
 - Filebeat watches for logs.
