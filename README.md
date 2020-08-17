@@ -25,9 +25,9 @@ Load balancing ensures that the application will be highly __stable__, in additi
 - Load balancers focus on network stability by taking incoming network and distributing it among the avalable machines. 
 - A jump box allows a point of access for a user, so that internal network access from the outside may be restricted.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __metrics__ and system __logs__.
-- Filebeat watches for logs.
-- Metricbeat records metrics.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __logs__ and system __metrics__.
+- Filebeat collects, parses and vizualizes logs from the system or other modules and forwards them to Kibana. 
+- Metricbeat collects and ships different system and service metrics (e.g. CPU and memory usuage) and forwards them to Kibana.
 
 The configuration details of each machine may be found below.
 
