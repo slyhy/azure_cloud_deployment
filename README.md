@@ -85,7 +85,7 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - Filebeat is used to collect system logs such as system.syslog which records system events. 
 - Metricbeat is used to collect information on different system metrics like CPU usage.  
-
+ 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
