@@ -53,6 +53,7 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump-Box | Yes                 | Local IP             |
+| Red_Team_LB | Yes              | All HTTP traffic over port 80|
 | Web-1    | No                  | 10.0.0.4             |
 | Web-2    | No                  | 10.0.0.4             |
 | ELK      | Yes                 | 10.0.0.4 and Local IP       |   
