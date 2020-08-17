@@ -43,7 +43,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the __Jump Box__ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 162.203.126.84
+- My local IP
 
 Machines within the network can only be accessed by __the Jump Box__.
 - The Jump Box is the machine that was allowed to acces the ELK VM. It's IP address is: 10.0.0.4
@@ -52,10 +52,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump-Box | Yes                 | 162.203.126.84       |
+| Jump-Box | Yes                 | Local IP             |
 | Web-1    | No                  | 10.0.0.4             |
 | Web-2    | No                  | 10.0.0.4             |
-| ELK      | Yes                 | 162.203.126.84       |   
+| ELK      | Yes                 | 10.0.0.4 and Local IP       |   
 
 ### Elk Configuration
 
