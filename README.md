@@ -61,7 +61,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- A properly configured playbook allows for the easy and correct deployment ELK machines. 
+- A properly configured playbook allows for the easy and correct deployment ELK or other containers without the need of SSH ing into several machines.  
 
 The playbook implements the following tasks:
 - Installs docker.io and python3-pip using apt module
@@ -90,6 +90,6 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the __playbook (e.g beat_install.yml for filebeat/metricbeat or elk_deployment.yml for elk)__ file to __/etc/ansible/roles/__.
-- Update the __playbook__ file to include __host name where you want to install the playbook (e.g. weberservers or elk)__.
+- Copy the __elk_deployment.yml__ file to __/etc/ansible/__.
+- Update the __elk_deployment.yml__ file to include __host name where you want to install the playbook (e.g. elk)__.
 - Run the playbook, and navigate to __Kibana web app (ELK_VM_IP:5601/app/kibana)__ to check that the installation worked as expected.
