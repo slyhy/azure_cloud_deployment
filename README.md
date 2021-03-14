@@ -34,35 +34,33 @@ The configuration details of each machine may be found below.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.4   | Linux            |
+| Jump Box | Gateway  | 10.0.0.4   | Linux w/Ansible container|
 | Web-1    | Webserver| 10.0.0.5   | Linux w/DVWA container|
 | Web-2    | Webserver| 10.0.0.6   | Linux w/DVWA container|
 | ELK      | ELK Stack| 10.1.0.4   | Linux w/ELK container |
 - - -
 ## Access Policies
 
-The machines on the internal network are not exposed to the public Internet. 
+The machines on the internal network are not exposed to the public internet. 
 
-Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- My local IP
-
-Machines within the network can only be accessed by the Jump Box.
-- The Jump Box is the machine that was allowed to acces the ELK VM. It's IP address is: 10.0.0.4
+* Only the Jump Box machine can accept connections from the public internet. 
+* Access to the Jump Box is only allowed from my local IP address.
+* Machines within the  network can only be accessed by the Jump Box.
+* The Kibana web app, which is hosted one the ELK VM, can only be accessed through the public internet by my `local IP address` over port 5601.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump-Box | Yes                 | Local IP             |
-| Red_Team_LB | Yes              | All HTTP traffic over port 80|
+| Jump Box | Yes                 | Local IP Address           |
+| Load Balancer | Yes            | All HTTP traffic over port 80|
 | Web-1    | No                  | 10.0.0.4             |
 | Web-2    | No                  | 10.0.0.4             |
 | ELK      | Yes                 | 10.0.0.4 and Local IP       |   
 - - -
 ## Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- A properly configured playbook allows for the easy and correct deployment ELK or other containers without the need of SSH ing into several machines.  
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because a properly configured playbook allows for the simple and correct deployment ELK or other containers without the need of SSH ing into several machines.  
 
 The playbook implements the following tasks:
 - Installs docker.io and python3-pip using apt module
