@@ -79,8 +79,8 @@ This ELK server is configured to monitor the following machines:
 
 | Machine Name | IP Address |
 | ------------ |----------  |
-| 10.0.0.5     | Web-1      |
-| 10.0.0.6     | Web-2      |
+| Web-1        | 10.0.0.5   |
+| Web-2        | 10.0.0.6   |
 
 We have installed the following Beats on these machines:
 - Filebeat
