@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Project Diagram](Images/Net_Topology.png)
 
-[These files](https://github.com/slyhy/azure_cloud_deployment/tree/master/ansible_playbooks) have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the beat_install.yml file may be used to install only certain pieces of it, such as Filebeat.
+[These files](https://github.com/slyhy/azure_cloud_deployment/tree/master/ansible_playbooks) have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the `Beat Installation Playbook` may be used to install only certain pieces of it, such as Filebeat or Metricbeat.
 
   * [DVWA Deployment Playbook](ansible_playbooks/DVWA_deployment.yml)
   * [ELK Deployment Playbook](ansible_playbooks/elk_deployment.yml)
@@ -22,9 +22,9 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, while the jump box restricts traffic to the network.
-- Load balancers focus on network stability by taking incoming network and distributing it among the avalable machines. 
-- A jump box allows a point of access for a user, so that internal network access from the outside may be restricted.
+Load balancing ensures that the application will be highly available, while the jump box restricts access to the network.
+- Load balancers focus on network availability by taking incoming traffic and distributing it among the available virtual machines. 
+- The jump box behaves as a point of access for the user, so that access to the internal network is restricted.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system metrics.
 - Filebeat collects, parses and vizualizes logs from the system or other modules and forwards them to Kibana. 
