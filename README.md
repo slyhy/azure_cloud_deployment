@@ -6,7 +6,9 @@ The files in this repository were used to configure the network depicted below.
 
 [These files](https://github.com/slyhy/azure_cloud_deployment/tree/master/ansible_playbooks) have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the beat_install.yml file may be used to install only certain pieces of it, such as Filebeat.
 
-  - [beat_install.yml](https://github.com/slyhy/azure_cloud_deployment/blob/master/ansible_playbooks/beat_install.yml)
+  * [DVWA Deployment Playbook](ansible_playbooks/DVWA_deployment.yml)
+  * [ELK Deployment Playbook](ansible_playbooks/elk_deployment.yml)
+  * [beat_install.yml](ansible_playbooks/beat_install.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -71,7 +73,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Images/docker_ps_output.png](https://github.com/slyhy/azure_cloud_deployment/blob/master/Images/ELK_Container.PNG)
+![Images/docker_ps_output.png](Images/ELK_Container.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -93,3 +95,5 @@ SSH into the control node and follow the steps below:
 - Copy the __elk_deployment.yml__ file to __/etc/ansible/__.
 - Update the __elk_deployment.yml__ file to include __host name where you want to install the playbook (e.g. elk)__.
 - Run the playbook, and navigate to __Kibana web app (ELK_VM_IP:5601/app/kibana)__ to check that the installation worked as expected.
+
+![Kibana Metrics](Images/data.PNG)
