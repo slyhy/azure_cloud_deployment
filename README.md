@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
   * [DVWA Deployment Playbook](ansible_playbooks/DVWA_deployment.yml)
   * [ELK Deployment Playbook](ansible_playbooks/elk_deployment.yml)
-  * [beat_install.yml](ansible_playbooks/beat_install.yml)
+  * [Beat Installation Playbook](ansible_playbooks/beat_install.yml)
 
 This document contains the following details:
 - Description of the Topology
