@@ -1,4 +1,4 @@
-## Automated ELK Stack Deployment
+# Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
@@ -17,17 +17,16 @@ This document contains the following details:
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
-
-
-### Description of the Topology
+- - -
+## Description of the Topology
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly __stable__, in addition to restricting __traffic__ to the network.
+Load balancing ensures that the application will be highly available, while the jump box restricts traffic to the network.
 - Load balancers focus on network stability by taking incoming network and distributing it among the avalable machines. 
 - A jump box allows a point of access for a user, so that internal network access from the outside may be restricted.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __logs__ and system __metrics__.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system metrics.
 - Filebeat collects, parses and vizualizes logs from the system or other modules and forwards them to Kibana. 
 - Metricbeat collects and ships different system and service metrics (e.g. CPU and memory usuage) and forwards them to Kibana.
 
@@ -39,15 +38,15 @@ The configuration details of each machine may be found below.
 | Web-1    | Webserver| 10.0.0.5   | Linux w/DVWA container|
 | Web-2    | Webserver| 10.0.0.6   | Linux w/DVWA container|
 | ELK      | ELK Stack| 10.1.0.4   | Linux w/ELK container |
-
-### Access Policies
+- - -
+## Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the __Jump Box__ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - My local IP
 
-Machines within the network can only be accessed by __the Jump Box__.
+Machines within the network can only be accessed by the Jump Box.
 - The Jump Box is the machine that was allowed to acces the ELK VM. It's IP address is: 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
@@ -59,8 +58,8 @@ A summary of the access policies in place can be found in the table below.
 | Web-1    | No                  | 10.0.0.4             |
 | Web-2    | No                  | 10.0.0.4             |
 | ELK      | Yes                 | 10.0.0.4 and Local IP       |   
-
-### Elk Configuration
+- - -
+## Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - A properly configured playbook allows for the easy and correct deployment ELK or other containers without the need of SSH ing into several machines.  
@@ -77,8 +76,11 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- 10.0.0.5 - Web-1
-- 10.0.0.6 - Web-2
+
+| Machine Name | IP Address |
+| ------------ |----------  |
+| 10.0.0.5     | Web-1      |
+| 10.0.0.6     | Web-2      |
 
 We have installed the following Beats on these machines:
 - Filebeat
@@ -87,13 +89,13 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - Filebeat is used to collect system logs such as system.syslog which records system events. 
 - Metricbeat is used to collect information on different system metrics like CPU usage.  
- 
-### Using the Playbook
+- - - 
+## Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the __elk_deployment.yml__ file to __/etc/ansible/__.
-- Update the __elk_deployment.yml__ file to include __host name where you want to install the playbook (e.g. elk)__.
-- Run the playbook, and navigate to __Kibana web app (ELK_VM_IP:5601/app/kibana)__ to check that the installation worked as expected.
+- Copy the elk_deployment.yml file to /etc/ansible/.
+- Update the elk_deployment.yml file to include host name where you want to install the playbook (e.g. elk).
+- Run the playbook, and navigate to Kibana web app (ELK_VM_IP:5601/app/kibana) to check that the installation worked as expected.
 
 ![Kibana Metrics](Images/data.PNG)
