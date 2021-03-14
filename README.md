@@ -16,7 +16,7 @@ This document contains the following details:
 - ELK Configuration
   - Machines Being Monitored
   - Beats in Use
-- How to Use the Ansible Build
+- How to Use the Ansible Playbook
 - - -
 ## Description of the Topology
 
