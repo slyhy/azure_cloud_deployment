@@ -60,11 +60,11 @@ A summary of the access policies in place can be found in the table below.
 - - -
 ## Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because a properly configured playbook allows for the simple and correct deployment ELK or other containers without the need of `SSH`ing into several machines.  
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because a properly configured playbook allows for the simple and correct deployment ELK or other containers without the need of using SSH to log into several machines one at a time.   
 
 The playbook implements the following tasks:
-- Installs docker.io and python3-pip using apt module
-- Install docker module using pip module
+- Installs `docker.io` and `python3-pip` using `apt` module
+- Install `docker` module using `pip` module
 - Inscrease virtual memory and configure system to increase virtal memory on restart.
 - Download and launch ELK container
 
@@ -91,8 +91,8 @@ These Beats allow us to collect the following information from each machine:
 ## Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:
-- Copy the elk_deployment.yml file to /etc/ansible/.
+`SSH` into the control node and follow the steps below:
+- Copy the elk_deployment.yml file to `/etc/ansible/`.
 - Update the elk_deployment.yml file to include host name where you want to install the playbook (e.g. elk).
 - Run the playbook, and navigate to Kibana web app (ELK_VM_IP:5601/app/kibana) to check that the installation worked as expected.
 
